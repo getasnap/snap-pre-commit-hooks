@@ -1,0 +1,6 @@
+-   id: prepend-branch-name
+    name: prepend each commit message with the branch name
+    description: Ensures that all commits on a feature branch can be traced, useful if using rebase merge strategy
+    entry: prepend-branch-name/prepend-branch-name.sh
+    language: script
+    stages: [commit-msg]
