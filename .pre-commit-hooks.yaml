@@ -4,10 +4,17 @@
     entry: prepend-branch-name/prepend-branch-name.sh
     language: script
     stages: [commit-msg]
--   id: run-husky
+-   id: run-husky-commit
     name: Invoke husky
     description: Wrapper around the call to husky to allow husky commit hooks to be run
-    entry: run-husky/run-husky.sh
+    entry: run-husky/run-husky-commit.sh
     language: script
     verbose: true
     stages: [commit]
+-   id: run-husky-commit-msg
+    name: Invoke husky
+    description: Wrapper around the call to husky to allow husky commit hooks to be run
+    entry: run-husky/run-husky-commit-msg.sh
+    language: script
+    verbose: true
+    stages: [commit-msg]

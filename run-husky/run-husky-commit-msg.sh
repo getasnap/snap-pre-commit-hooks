@@ -10,14 +10,10 @@
 #   Directory: /app/node_modules/husky
 #   Homepage: https://github.com/typicode/husky#readme
 
-printf "0 = $0\n"
-printf "1 = $1\n"
-printf "2 = $2\n"
-printf "3 = $3\n"
-printf "4 = $4\n"
+echo $@
 
 scriptPath="node_modules/husky/run.js"
-hookName=`basename "$0"`
+hookName="pre-commit-msg"
 gitParams="$*"
 
 debug() {
