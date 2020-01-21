@@ -4,17 +4,17 @@
     entry: prepend-branch-name/prepend-branch-name.sh
     language: script
     stages: [commit-msg]
--   id: run-husky-commit
+-   id: yarn-system-husky-commit
     name: Invoke husky
-    description: Wrapper around the call to husky to allow husky commit hooks to be run
-    entry: run-husky/run-husky-commit.sh
+    description: Wrapper around the call to husky to allow husky pre-commit hooks to be run
+    entry: yarn-system-husky/run-husky-commit.sh
     language: script
     verbose: true
     stages: [commit]
--   id: run-husky-commit-msg
+-   id: yarn-system-husky-commit-msg
     name: Invoke husky
-    description: Wrapper around the call to husky to allow husky commit hooks to be run
-    entry: run-husky/run-husky-commit-msg.sh
+    description: Wrapper around the call to husky to allow husky pre-commit-msg hooks to be run
+    entry: yarn-system-husky/run-husky-commit-msg.sh
     language: script
     verbose: true
     stages: [commit-msg]
