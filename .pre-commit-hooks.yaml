@@ -9,4 +9,4 @@
     description: Wrapper around the call to husky to allow husky commit hooks to be run
     entry: run-husky/run-husky.sh
     language: script
-    stages: [pre-commit]
+    stages: [commit]
