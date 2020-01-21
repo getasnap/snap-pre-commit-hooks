@@ -10,11 +10,11 @@
 #   Directory: /app/node_modules/husky
 #   Homepage: https://github.com/typicode/husky#readme
 
-printf "0 = $0"
-printf "1 = $1"
-printf "2 = $2"
-printf "3 = $3"
-printf "4 = $4"
+printf "0 = $0\n"
+printf "1 = $1\n"
+printf "2 = $2\n"
+printf "3 = $3\n"
+printf "4 = $4\n"
 
 scriptPath="node_modules/husky/run.js"
 hookName=`basename "$0"`
