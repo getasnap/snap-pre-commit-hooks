@@ -1,19 +1,6 @@
 #!/bin/sh
 # husky
 
-# Hook created by Husky
-#   Version: 3.1.0
-#   At: 1/15/2020, 11:06:06 AM
-#   See: https://github.com/typicode/husky#readme
-
-# From
-#   Directory: /app/node_modules/husky
-#   Homepage: https://github.com/typicode/husky#readme
-
-echo $@
-echo "hmmmm"
-echo "$#"
-
 OPTIONS=()
 # If arg doesn't pass [ -f ] check, then it is assumed to be an option
 #
@@ -49,9 +36,6 @@ while [ $# -gt 0 ]; do
 	shift
 done
 
-echo "OPTIONS \n$OPTIONS"
-echo "FILES \n$FILES"
-
 for i in ${OPTIONS[@]}; do
 	case $i in
 		--hook-stage=*)
@@ -73,7 +57,7 @@ debug() {
 }
 
 printf -v gitParams "%s " "${FILES[@]}"
-debug "husky v3.1.0 (created at 1/15/2020, 11:06:06 AM)"
+debug "=======husky========"
 debug "$hookName hook started"
 debug "Current working directory is '`pwd`'"
 debug "gitParams $gitParams"
