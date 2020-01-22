@@ -52,10 +52,19 @@ done
 echo "OPTIONS \n$OPTIONS"
 echo "FILES \n$FILES"
 
+for i in ${OPTIONS[@]}; do
+	case $i in
+		--hook-stage=*)
+		hookName="${i#*=}"
+		shift # past argument=value
+		;;
+		*)
+			# unknown option
+		;;
+	esac
+done
+
 scriptPath="node_modules/husky/run.js"
-hookName="pre-commit"
-# gitParams="$*"
-printf -v gitParams "%s " "${FILES[@]}"
 
 debug() {
   if [ "${HUSKY_DEBUG}" = "true" ] || [ "${HUSKY_DEBUG}" = "1" ]; then
@@ -63,10 +72,11 @@ debug() {
   fi
 }
 
-debug "gitParams $gitParams"
+printf -v gitParams "%s " "${FILES[@]}"
 debug "husky v3.1.0 (created at 1/15/2020, 11:06:06 AM)"
 debug "$hookName hook started"
 debug "Current working directory is '`pwd`'"
+debug "gitParams $gitParams"
 
 if [ "${HUSKY_SKIP_HOOKS}" = "true" ] || [ "${HUSKY_SKIP_HOOKS}" = "1" ]; then
   debug "HUSKY_SKIP_HOOKS is set to ${HUSKY_SKIP_HOOKS}, skipping hook"
