@@ -54,7 +54,8 @@ echo "FILES \n$FILES"
 
 scriptPath="node_modules/husky/run.js"
 hookName="pre-commit"
-gitParams="$*"
+# gitParams="$*"
+printf -v gitParams "%s " "${FILES[@]}"
 
 debug() {
   if [ "${HUSKY_DEBUG}" = "true" ] || [ "${HUSKY_DEBUG}" = "1" ]; then
@@ -62,6 +63,7 @@ debug() {
   fi
 }
 
+debug "gitParams $gitParams"
 debug "husky v3.1.0 (created at 1/15/2020, 11:06:06 AM)"
 debug "$hookName hook started"
 debug "Current working directory is '`pwd`'"
