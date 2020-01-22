@@ -11,3 +11,4 @@
     language: script
     verbose: true
     require_serial: true
+    stages: [commit, prepare-commit-msg, commit-msg, push, merge-commit]
