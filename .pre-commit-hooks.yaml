@@ -10,6 +10,7 @@
     entry: yarn-system-husky/run-husky-commit.sh
     language: script
     verbose: true
+    require_serial: true
     stages: [commit]
 -   id: yarn-system-husky-commit-msg
     name: Invoke husky
@@ -17,4 +18,5 @@
     entry: yarn-system-husky/run-husky-commit-msg.sh
     language: script
     verbose: true
+    require_serial: true
     stages: [commit-msg]
