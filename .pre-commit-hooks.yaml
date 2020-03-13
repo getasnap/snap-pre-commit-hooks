@@ -18,4 +18,4 @@
     language: script
     stages: [commit-msg]
     require_serial: true
-    files: 'models.py$'
+    files: 'dj_snap_utils/models.py'
