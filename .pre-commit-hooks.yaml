@@ -16,5 +16,6 @@
     name: Check django migrations
     entry: check-django-migrations/check-django-migrations.sh
     language: script
+    files: .+\/models.*\.py$
     stages: [commit]
     require_serial: true
