@@ -12,3 +12,11 @@
     verbose: true
     require_serial: true
     stages: [commit, prepare-commit-msg, commit-msg, push, merge-commit]
+-   id: pre-commit-django-migrations
+    name: Check django migrations
+    entry: check-django-migrations-in-docker/check-django-migrations-in-docker.sh
+    language: script
+    stages: [commit-msg]
+    types: [python]
+    require_serial: true
+    fiiles: 'models.py'
