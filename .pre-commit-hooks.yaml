@@ -19,4 +19,4 @@
     stages: [commit-msg]
     types: [python]
     require_serial: true
-    files: 'models.py'
+    files: 'models.*$'
