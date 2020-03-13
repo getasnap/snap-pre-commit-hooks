@@ -17,6 +17,5 @@
     entry: check-django-migrations/check-django-migrations.sh
     language: script
     stages: [commit-msg]
-    types: [python]
     require_serial: true
-    files: 'models.*$'
+    files: (^|/)models.+py$
