@@ -16,5 +16,5 @@
     name: Check django migrations
     entry: check-django-migrations/check-django-migrations.sh
     language: script
-    stages: [commit-msg]
+    stages: [commit]
     require_serial: true
