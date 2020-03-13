@@ -6,4 +6,4 @@ if [ -z "$PRE_COMMIT_DOCKER_CONTAINER" ]; then
     exit 1
 fi
 
-docker exec -it ${PRE_COMMIT_DOCKER_CONTAINER} ./manage.py makemigrations --check --dry-run
+docker exec -i ${PRE_COMMIT_DOCKER_CONTAINER} ./manage.py makemigrations --check --dry-run
