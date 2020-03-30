@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+MYARGS=$1
+
+echo "CONTAINER=$1"
+
 if [ -z "$PRE_COMMIT_DOCKER_CONTAINER" ]; then
 	echo "No PRE_COMMIT_DOCKER_CONTAINER env variable set.  try "
 	echo "export PRE_COMMIT_DOCKER_CONTAINER=development_users-api.api_1"
