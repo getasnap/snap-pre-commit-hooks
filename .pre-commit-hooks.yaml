@@ -23,6 +23,5 @@
     name: Check For uncommitted django migrations files
     entry: check-django-missing-migrations/check-django-missing-migrations.sh
     language: script
-    files: .+\/models.*\.py$
     stages: [commit]
     require_serial: true

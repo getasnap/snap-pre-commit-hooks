@@ -8,9 +8,9 @@ if test -z "$UNTRACKED_MIGRATIONS"; then
   exit 0
 else
   # If there are untracked files in the migrations directory print a warning message.
-  echo "Warning -- You are trying to commit changes to Django models"
-  echo "And there are untracked files in your migrations directory"
+  echo "Warning -- there are untracked files in your migrations directory"
   echo "Please add the below migrations to your commit"
+  echo "Or work out if deleting them will cause armageddon"
   echo
   echo "$UNTRACKED_MIGRATIONS"
   exit 1
