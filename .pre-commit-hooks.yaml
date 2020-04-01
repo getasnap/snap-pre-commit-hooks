@@ -27,7 +27,8 @@
     require_serial: true
 -   id: check-openapi3-lint
     name: Check For openapi3 linting errors
-    entry: OVERRIDE ME
-    language: docker
+    entry: ./check-openapi3-lint/check-openapi3-lint.sh
+    language: script
     stages: [commit]
     require_serial: true
+    files: .+-api.yaml$
