@@ -32,3 +32,10 @@
     stages: [commit]
     require_serial: true
     files: .+-api.yaml$
+-   id: check-openapi-version-control
+    name: Ensure openapi version number has been incremented alongside edits
+    entry: ./check-openapi-version-control/check-openapi-version-control.sh
+    language: script
+    stages: [commit]
+    require_serial: true
+    files: .+-api.yaml$
