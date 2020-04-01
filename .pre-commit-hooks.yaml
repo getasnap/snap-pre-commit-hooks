@@ -25,3 +25,9 @@
     language: script
     stages: [commit]
     require_serial: true
+-   id: check-openapi3-lint
+    name: Check For openapi3 linting errors
+    entry: OVERRIDE ME
+    language: docker
+    stages: [commit]
+    require_serial: true
